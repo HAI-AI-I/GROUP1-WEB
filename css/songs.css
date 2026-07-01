@@ -1,0 +1,569 @@
+/*==================================
+        SONG COVER
+==================================*/
+
+.song-cover {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid #2d3658;
+  display: block;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.user-info h4 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.user-info p {
+  font-size: 12px;
+  color: #aaa;
+}
+
+/*==================================
+        GENRE BADGE
+==================================*/
+
+.genre-badge {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 20px;
+  background: #8b5cf6;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/*==================================
+        ACTION BUTTON
+==================================*/
+
+.action-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.action-btn button,
+.action-btn a {
+  width: 36px;
+  height: 36px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+  color: #fff;
+
+  transition: 0.3s;
+}
+
+.view-btn {
+  background: #3b82f6;
+}
+
+.edit-btn {
+  background: #f59e0b;
+}
+
+.download-btn {
+  background: #10b981;
+}
+
+.delete-btn {
+  background: #ef4444;
+}
+
+.action-btn button:hover,
+.action-btn a:hover {
+  transform: scale(1.08);
+}
+
+/*==================================
+            MODAL
+==================================*/
+
+.modal {
+  display: none;
+
+  position: fixed;
+
+  left: 0;
+
+  top: 0;
+
+  width: 100%;
+
+  height: 100%;
+
+  background: rgba(0, 0, 0, 0.7);
+
+  justify-content: center;
+
+  align-items: center;
+
+  z-index: 999;
+}
+
+.song-modal {
+  width: 750px;
+
+  background: #161d36;
+
+  border-radius: 18px;
+
+  padding: 25px;
+
+  animation: showModal 0.3s;
+}
+
+@keyframes showModal {
+  from {
+    transform: translateY(-30px);
+
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+
+    opacity: 1;
+  }
+}
+
+.modal-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 25px;
+}
+
+.modal-header h2 {
+  font-size: 24px;
+}
+
+.modal-header span {
+  cursor: pointer;
+
+  font-size: 22px;
+}
+
+/*==================================
+        FORM ADD SONG
+==================================*/
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #ddd;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+
+  padding: 12px 15px;
+
+  border: 1px solid #2c355a;
+
+  border-radius: 10px;
+
+  background: #0f172a;
+
+  color: #fff;
+
+  outline: none;
+
+  transition: 0.3s;
+
+  font-size: 14px;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #8b5cf6;
+
+  box-shadow: 0 0 8px rgba(139, 92, 246, 0.35);
+}
+
+.row {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 20px;
+}
+
+/*==================================
+        UPLOAD
+==================================*/
+
+.upload-grid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 25px;
+
+  margin-top: 10px;
+}
+
+.upload-box label {
+  font-weight: 600;
+
+  display: block;
+
+  margin-bottom: 10px;
+}
+
+.upload-area {
+  border: 2px dashed #404c79;
+
+  border-radius: 15px;
+
+  min-height: 220px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: center;
+
+  text-align: center;
+
+  padding: 20px;
+
+  transition: 0.3s;
+
+  background: #11192f;
+}
+
+.upload-area:hover {
+  border-color: #8b5cf6;
+}
+
+.preview-image {
+  width: 140px;
+
+  height: 140px;
+
+  border-radius: 12px;
+
+  object-fit: cover;
+
+  margin-bottom: 15px;
+
+  border: 2px solid #2d3658;
+}
+
+.upload-icon {
+  font-size: 60px;
+
+  color: #8b5cf6;
+
+  margin-bottom: 20px;
+}
+
+.upload-btn {
+  background: #8b5cf6;
+
+  color: #fff;
+
+  padding: 10px 18px;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+
+  margin-bottom: 12px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 8px;
+}
+
+.upload-btn:hover {
+  background: #7c3aed;
+}
+
+.upload-area small {
+  color: #9ca3af;
+
+  font-size: 13px;
+
+  word-break: break-all;
+}
+
+/*==================================
+        VIEW SONG
+==================================*/
+
+.view-song {
+  display: flex;
+
+  align-items: center;
+
+  gap: 30px;
+
+  margin-bottom: 25px;
+}
+
+.view-cover {
+  width: 220px;
+
+  height: 220px;
+
+  object-fit: cover;
+
+  border-radius: 18px;
+
+  border: 3px solid #2d3658;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+}
+
+.view-info {
+  flex: 1;
+}
+
+.view-info h2 {
+  font-size: 28px;
+
+  margin-bottom: 20px;
+
+  color: #fff;
+}
+
+.view-info p {
+  margin: 12px 0;
+
+  font-size: 15px;
+
+  color: #d1d5db;
+}
+
+.view-info strong {
+  color: #fff;
+
+  display: inline-block;
+
+  width: 90px;
+}
+
+.view-info span {
+  color: #9ca3af;
+}
+
+/*==================================
+        AUDIO PLAYER
+==================================*/
+
+audio {
+  width: 100%;
+
+  margin-top: 20px;
+
+  border-radius: 10px;
+
+  outline: none;
+}
+
+/*==================================
+        MODAL FOOTER
+==================================*/
+
+.modal-footer {
+  display: flex;
+
+  justify-content: flex-end;
+
+  gap: 15px;
+
+  margin-top: 30px;
+}
+
+.cancel-btn {
+  padding: 12px 25px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: #374151;
+
+  color: #fff;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+
+  font-size: 14px;
+
+  font-weight: 600;
+}
+
+.cancel-btn:hover {
+  background: #4b5563;
+}
+
+.modal-footer .add-btn {
+  padding: 12px 25px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+}
+
+/*==================================
+        PAGE HEADER
+==================================*/
+
+.page-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 25px;
+}
+
+.page-header h2 {
+  font-size: 30px;
+
+  font-weight: 700;
+}
+
+.page-header p {
+  color: #9ca3af;
+
+  margin-top: 6px;
+}
+
+.top-action {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+}
+
+.search-user {
+  display: flex;
+
+  align-items: center;
+
+  background: #161d36;
+
+  padding: 10px 16px;
+
+  border-radius: 12px;
+
+  width: 300px;
+}
+
+.search-user i {
+  color: #9ca3af;
+}
+
+.search-user input {
+  flex: 1;
+
+  margin-left: 10px;
+
+  background: none;
+
+  border: none;
+
+  outline: none;
+
+  color: #fff;
+}
+
+/*==================================
+        RESPONSIVE
+==================================*/
+
+@media (max-width: 1000px) {
+  .page-header {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 20px;
+  }
+
+  .top-action {
+    width: 100%;
+
+    flex-direction: column;
+  }
+
+  .search-user {
+    width: 100%;
+  }
+
+  .upload-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .row {
+    grid-template-columns: 1fr;
+  }
+
+  .view-song {
+    flex-direction: column;
+
+    text-align: center;
+  }
+
+  .view-cover {
+    width: 180px;
+
+    height: 180px;
+  }
+
+  .song-modal {
+    width: 95%;
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+  }
+}
